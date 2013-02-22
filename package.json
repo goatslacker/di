@@ -1,5 +1,5 @@
 {
-  "name": "di",
+  "name": "dependency-injector",
   "author": "Josh Perez <josh@goatslacker.com>",
   "version": "0.0.1",
   "description": "Dependency Injection via function arguments",
@@ -16,6 +16,7 @@
   },
 
   "keywords": [
+    "di",
     "dependency",
     "injection"
   ],
