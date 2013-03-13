@@ -1,4 +1,4 @@
-var getParameterNames = require('getParameterNames')
+var getParameterNames = require('get-parameter-names')
 
 function DI() {
   this._registers = {}

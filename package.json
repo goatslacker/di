@@ -1,7 +1,7 @@
 {
   "name": "dependency-injector",
   "author": "Josh Perez <josh@goatslacker.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dependency Injection via function arguments",
 
   "repository": {
@@ -12,13 +12,15 @@
   "main": "index.js",
 
   "dependencies": {
-    "getParameterNames": "*"
+    "get-parameter-names": "*"
   },
 
   "keywords": [
     "di",
     "dependency",
-    "injection"
+    "injection",
+    "dependency injection",
+    "injector"
   ],
 
   "engines": {
