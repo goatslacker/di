@@ -1,11 +1,17 @@
 var getParameterNames = require('get-parameter-names')
 
-function DI() {
-  this._registers = {}
+function DI(registers) {
+  this._registers = registers || {}
 }
 
 DI.prototype.register = function (name, fn) {
-  this._registers[name] = fn
+  if (typeof name === 'object') {
+    Object.keys(name).forEach(function (key) {
+      this._registers[key] = name[key]
+    }.bind(this))
+  } else {
+    this._registers[name] = fn
+  }
 }
 
 DI.prototype.getParameterNames = getParameterNames
@@ -33,6 +39,10 @@ DI.prototype.inject = function (fn, additionalDependencies) {
   return function () {
     return fn.apply(fn, dependencies)
   }
+}
+
+DI.prototype.clone = function () {
+  return new DI(this._registers)
 }
 
 module.exports = DI
