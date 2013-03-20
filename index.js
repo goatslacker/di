@@ -32,7 +32,7 @@ DI.prototype.inject = function (fn, additionalDependencies) {
 
     throw new ReferenceError(
       '`' + param + '` was defined but ' +
-      'not registered with ni'
+      'not registered with dependency-injector'
     )
   }.bind(this))
 
