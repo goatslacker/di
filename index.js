@@ -12,6 +12,7 @@ DI.prototype.register = function (name, fn) {
   } else {
     this._registers[name] = fn
   }
+  return this
 }
 
 DI.prototype.getParameterNames = getParameterNames
